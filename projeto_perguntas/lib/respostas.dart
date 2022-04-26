@@ -15,7 +15,7 @@ class Resposta extends StatelessWidget {
       child: (
          RaisedButton(
            textColor: Colors.amber[100],
-           color: Colors.red[200],
+           color: Colors.red[500],
               child: Text(_texto),
               onPressed: _quandoSelecionado)),
             );
