@@ -49,6 +49,13 @@ class _perguntaAppState extends State<PerguntaApp> {
     print(_pontuacaoTotal);
   }
 
+  void reiniciarQuestionario(){
+    setState(() {
+      perguntaselecionada = 0;
+      _pontuacaoTotal = 0;
+    });
+  }
+
   bool get temPerguntaSelecionada {
     return perguntaselecionada < _perguntas.length;
   }
@@ -64,7 +71,7 @@ class _perguntaAppState extends State<PerguntaApp> {
               perguntas: _perguntas,
               perguntaSelecionada: perguntaselecionada,
               responder: _responder)
-          : Resultado(_pontuacaoTotal),
+          : Resultado(_pontuacaoTotal, reiniciarQuestionario),
     ));
   }
 }
